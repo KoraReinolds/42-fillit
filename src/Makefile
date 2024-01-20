@@ -1,6 +1,6 @@
-# CmpFlags = -Wall -Wextra -Werror
+include files.mk
 
-files = main
+# CmpFlags = -Wall -Wextra -Werror
 
 Compiler = gcc
 
