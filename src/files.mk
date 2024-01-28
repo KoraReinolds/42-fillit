@@ -1,2 +1,3 @@
 files = main \
-	word_count
+	word_count \
+	split

@@ -1,11 +1,12 @@
-#include <stdio.h>
 #include "fillit.h"
 
 int main(int argc, char** argv) {
-    char del = ' ';
+    const char *delimiter = " ";
 
     if (argc == 2) {
-        printf("%d\n", word_count(argv[1], del));
+        char *substrings[word_count(argv[1], delimiter[0])];
+        
+        printf("%d\n", split(argv[1], delimiter, substrings));
     }
 
     return 0;
