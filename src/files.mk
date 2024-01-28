@@ -1,1 +1,2 @@
-files = main
+files = main \
+	word_count
