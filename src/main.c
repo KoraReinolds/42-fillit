@@ -13,7 +13,8 @@ int main(int argc, char** argv) {
             printf("%s\n", substrings[i]);
         }
 
-        struct s_map map = create_map(54); 
+        struct s_map map = create_map(5);
+        print_map(&map);
         free_map(&map);
     }
 

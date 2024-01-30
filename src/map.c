@@ -1,19 +1,36 @@
 #include "fillit.h"
 
 t_map create_map(int size) {
-    struct s_map map;
-    map.size = size;
-    map.array = (char **)malloc(size * sizeof(char *));
+	struct s_map map;
+
+  	map.size = size;
+  	map.array = (int *)malloc(size * sizeof(int));
     
-    for (int i = 0; i < size; ++i) {
-        map.array[i] = (char *)malloc(size * sizeof(char));
-    }
-    return map;
+  	return map;
 }
 
 void free_map(t_map *map) {
-    for (int i = 0; i < map->size; ++i) {
-        free(map->array[i]);
-    }
-    free(map->array);
+	free(map->array);
+}
+
+void	print_map(t_map *map)
+{
+	int i = 0;
+	int j = 0;
+
+	while (i < map->size) {
+		int val = map->array[i];
+		j = 0;
+		while (j < map->size) {
+			if (val & 1) {
+				printf("%c", '#');
+			} else {
+				printf("%c", '.');
+			}
+			val >>= 1;
+			j++;
+		}
+		printf("\n");
+		i++;
+	}
 }
