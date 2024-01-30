@@ -1,3 +1,4 @@
-files = main \
-	word_count \
-	split
+files = main	\
+	word_count	\
+	split				\
+	map
