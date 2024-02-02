@@ -1,4 +1,6 @@
 files = main	\
 	word_count	\
-	split				\
-	map
+	split		\
+	field		\
+	tetramino	\
+	is_equal
