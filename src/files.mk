@@ -4,3 +4,4 @@ files = main	\
 	field		\
 	tetramino	\
 	is_equal
+

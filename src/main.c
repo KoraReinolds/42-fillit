@@ -16,6 +16,10 @@ int main(int argc, char** argv) {
         }
 
         struct s_map map = create_map(5);
+        struct s_point *point = get_point(2, 1);
+        if (can_set(&map, &piece, point) == 1) {
+            place_piece(&map, &piece, point);
+        }
         print_map(&map);
         free_map(&map);
     }
