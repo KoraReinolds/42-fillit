@@ -9,7 +9,7 @@ int main(int argc, char** argv) {
         
         split(argv[1], delimiter, substrings);
 
-        struct s_tetramino piece = parse_key("I");
+        struct s_tetramino piece = parse_key("L-270");
 
         for (int i = 0; i < words_count; i++) {
             printf("%s\n", substrings[i]);

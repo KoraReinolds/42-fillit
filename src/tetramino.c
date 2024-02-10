@@ -19,13 +19,158 @@ t_tetramino parse_key(char *key) {
 	
 	memset(piece.size, 0, sizeof(piece.size));
 
-	if (is_equal(key, "I")) {
+	if (is_equal(key, "I-0")) {
 		piece.height = 4;
 		piece.width = 1;
 		piece.size[0] = 1;
 		piece.size[1] = 1;
 		piece.size[2] = 1;
 		piece.size[3] = 1;
+		piece.start_point = get_point(0, 0);
+	} else if (is_equal(key, "I-180")) {
+		piece.height = 1;
+		piece.width = 4;
+		piece.size[0] = 15;
+		piece.size[1] = 0;
+		piece.size[2] = 0;
+		piece.size[3] = 0;
+		piece.start_point = get_point(0, 0);
+	} else if (is_equal(key, "J-0")) {
+		piece.height = 3;
+		piece.width = 2;
+		piece.size[0] = 2;
+		piece.size[1] = 2;
+		piece.size[2] = 3;
+		piece.size[3] = 0;
+		piece.start_point = get_point(1, 0);
+	} else if (is_equal(key, "J-90")) {
+		piece.height = 2;
+		piece.width = 3;
+		piece.size[0] = 4;
+		piece.size[1] = 7;
+		piece.size[2] = 0;
+		piece.size[3] = 0;
+		piece.start_point = get_point(2, 0);
+	} else if (is_equal(key, "J-180")) {
+		piece.height = 3;
+		piece.width = 2;
+		piece.size[0] = 1;
+		piece.size[1] = 1;
+		piece.size[2] = 3;
+		piece.size[3] = 0;
+		piece.start_point = get_point(0, 0);
+	} else if (is_equal(key, "J-270")) {
+		piece.height = 2;
+		piece.width = 3;
+		piece.size[0] = 7;
+		piece.size[1] = 1;
+		piece.size[2] = 0;
+		piece.size[3] = 0;
+		piece.start_point = get_point(0, 0);
+	} else if (is_equal(key, "L-0")) {
+		piece.height = 3;
+		piece.width = 2;
+		piece.size[0] = 1;
+		piece.size[1] = 1;
+		piece.size[2] = 3;
+		piece.size[3] = 0;
+		piece.start_point = get_point(0, 0);
+	} else if (is_equal(key, "L-90")) {
+		piece.height = 2;
+		piece.width = 3;
+		piece.size[0] = 7;
+		piece.size[1] = 1;
+		piece.size[2] = 0;
+		piece.size[3] = 0;
+		piece.start_point = get_point(0, 0);
+	} else if (is_equal(key, "L-180")) {
+		piece.height = 3;
+		piece.width = 2;
+		piece.size[0] = 3;
+		piece.size[1] = 2;
+		piece.size[2] = 2;
+		piece.size[3] = 0;
+		piece.start_point = get_point(0, 0);
+	} else if (is_equal(key, "L-270")) {
+		piece.height = 2;
+		piece.width = 3;
+		piece.size[0] = 4;
+		piece.size[1] = 7;
+		piece.size[2] = 0;
+		piece.size[3] = 0;
+		piece.start_point = get_point(2, 0);
+	} else if (is_equal(key, "Z-0")) {
+		piece.height = 2;
+		piece.width = 3;
+		piece.size[0] = 3;
+		piece.size[1] = 6;
+		piece.size[2] = 0;
+		piece.size[3] = 0;
+		piece.start_point = get_point(0, 0);
+	} else if (is_equal(key, "Z-90")) {
+		piece.height = 3;
+		piece.width = 2;
+		piece.size[0] = 2;
+		piece.size[1] = 3;
+		piece.size[2] = 1;
+		piece.size[3] = 0;
+		piece.start_point = get_point(1, 0);
+} else if (is_equal(key, "Z-180")) {
+		piece.height = 2;
+		piece.width = 3;
+		piece.size[0] = 6;
+		piece.size[1] = 3;
+		piece.size[2] = 0;
+		piece.size[3] = 0;
+		piece.start_point = get_point(1, 0);
+	} else if (is_equal(key, "Z-270")) {
+		piece.height = 3;
+		piece.width = 2;
+		piece.size[0] = 1;
+		piece.size[1] = 3;
+		piece.size[2] = 2;
+		piece.size[3] = 0;
+		piece.start_point = get_point(0, 0);
+		piece.start_point = get_point(0, 0);
+	} else if (is_equal(key, "T-0")) {
+		piece.height = 2;
+		piece.width = 3;
+		piece.size[0] = 7;
+		piece.size[1] = 2;
+		piece.size[2] = 0;
+		piece.size[3] = 0;
+		piece.start_point = get_point(0, 0);
+	} else if (is_equal(key, "T-90")) {
+		piece.height = 3;
+		piece.width = 2;
+		piece.size[0] = 2;
+		piece.size[1] = 3;
+		piece.size[2] = 2;
+		piece.size[3] = 0;
+		piece.start_point = get_point(1, 0);
+} else if (is_equal(key, "T-180")) {
+		piece.height = 2;
+		piece.width = 3;
+		piece.size[0] = 2;
+		piece.size[1] = 7;
+		piece.size[2] = 0;
+		piece.size[3] = 0;
+		piece.start_point = get_point(1, 0);
+	} else if (is_equal(key, "T-270")) {
+		piece.height = 3;
+		piece.width = 2;
+		piece.size[0] = 1;
+		piece.size[1] = 3;
+		piece.size[2] = 1;
+		piece.size[3] = 0;
+		piece.start_point = get_point(0, 0);
+	} else if (is_equal(key, "S-0")) {
+		piece.height = 2;
+		piece.width = 2;
+		piece.size[0] = 3;
+		piece.size[1] = 3;
+		piece.size[2] = 0;
+		piece.size[3] = 0;
 		piece.start_point = get_point(0, 0);
 	}
 	

@@ -16,7 +16,9 @@ void free_map(t_map *map) {
 int	can_set(t_map *map, t_tetramino *piece, t_point *start) {
 	if (
 		(start->x + piece->width - piece->start_point->x <= map->size) &&
-		(start->y + piece->height - piece->start_point->y <= map->size)
+		(start->x - piece->start_point->x >= 0) &&
+		(start->y + piece->height - piece->start_point->y <= map->size) &&
+		(start->y - piece->start_point->y >= 0)
 	) return 1;
 	else return 0;
 }
@@ -24,7 +26,7 @@ int	can_set(t_map *map, t_tetramino *piece, t_point *start) {
 void    place_piece(t_map *map, t_tetramino *piece, t_point *start) {
 	for (int i = 0; i < piece->height; i++) {
         int j = i + start->y;
-		map->array[j] = map->array[j] | (piece->size[i] << start->x);
+		map->array[j] = map->array[j] | ((piece->size[i] << start->x) >> piece->start_point->x);
 	}
 }
 
