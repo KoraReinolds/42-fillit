@@ -9,17 +9,27 @@ int main(int argc, char** argv) {
         
         split(argv[1], delimiter, substrings);
 
-        struct s_tetramino piece = parse_key("L-270");
+        struct s_tetramino pieces[words_count];
 
         for (int i = 0; i < words_count; i++) {
-            printf("%s\n", substrings[i]);
+            pieces[i] = parse_key(substrings[i]);
+        }
+
+        for (int i = 0; i < words_count; i++) {
+            printf("Piece %d: %s\n", i + 1, substrings[i]);
         }
 
         struct s_map map = create_map(5);
-        struct s_point *point = get_point(2, 1);
-        if (can_set(&map, &piece, point) == 1) {
-            place_piece(&map, &piece, point);
+        struct s_point *point = get_point(0, 0);
+
+        if (can_set(&map, &pieces[0], point) == 1) {
+            place_piece(&map, &pieces[0], point);
         }
+
+        if (can_set(&map, &pieces[1], point) == 1) {
+            place_piece(&map, &pieces[1], point);
+        }
+
         print_map(&map);
         free_map(&map);
     }
