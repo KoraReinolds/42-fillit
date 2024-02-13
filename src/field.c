@@ -30,8 +30,7 @@ void    place_piece(t_map *map, t_tetramino *piece, t_point *start) {
 	}
 }
 
-void	print_map(t_map *map)
-{
+void	print_map(t_map *map) {
 	int i = 0;
 	int j = 0;
 

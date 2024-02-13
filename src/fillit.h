@@ -36,5 +36,6 @@ int				is_equal	(char *s1, char *s2);
 t_point			*get_point	(int x, int y);
 int				can_set		(t_map *map, t_tetramino *piece, t_point *start);
 void			place_piece	(t_map *map, t_tetramino *piece, t_point *start);
+int				min_size	(t_tetramino *tetraminos, int num_tetraminos);
 
 #endif

@@ -177,3 +177,22 @@ t_tetramino parse_key(char *key) {
 	return piece;
 
 }
+
+int min_size(t_tetramino *tetraminos, int num_tetraminos) {
+    int total_size = num_tetraminos * 4;
+
+    int max_tetramino_dimension = 0;
+    for (int i = 0; i < num_tetraminos; i++) {
+        int max_dimension = tetraminos[i].width > tetraminos[i].height ? tetraminos[i].width : tetraminos[i].height;
+        if (max_dimension > max_tetramino_dimension) {
+            max_tetramino_dimension = max_dimension;
+        }
+    }
+
+    int min_size = 2;
+    while (min_size * min_size < total_size || min_size < max_tetramino_dimension) {
+        min_size++;
+    }
+
+    return min_size;
+}

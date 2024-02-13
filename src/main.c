@@ -6,7 +6,7 @@ int main(int argc, char** argv) {
     if (argc == 2) {
         int words_count = word_count(argv[1], delimiter[0]); 
         char *substrings[words_count];
-        
+				
         split(argv[1], delimiter, substrings);
 
         struct s_tetramino pieces[words_count];
@@ -32,6 +32,8 @@ int main(int argc, char** argv) {
 
         print_map(&map);
         free_map(&map);
+
+        printf("Min size: %d\n", min_size(pieces, words_count));
     }
 
     return 0;
